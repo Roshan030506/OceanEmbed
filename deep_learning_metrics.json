@@ -1,0 +1,75 @@
+{
+  "model_name": "OceanEmbed CNN encoder-decoder (PyTorch)",
+  "architecture": "convolutional encoder-decoder with a 16-dim learned embedding (autoencoder)",
+  "n_parameters": 42053,
+  "train_time_seconds": 53.735,
+  "epochs": 400,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "embedding_dim": 16,
+  "depth_levels_m": [
+    0.0,
+    50.0,
+    100.0,
+    500.0,
+    1000.0
+  ],
+  "validation_design": "chronological: first 24 days train, last 7 days validation",
+  "input_data": "ocean_data.npz (synthetic)",
+  "metrics": [
+    {
+      "depth_m": 0.0,
+      "rmse_degC": 0.3188658356666565,
+      "r2": 0.7888646721839905,
+      "bias_degC": 0.09271170943975449
+    },
+    {
+      "depth_m": 50.0,
+      "rmse_degC": 0.4752780795097351,
+      "r2": 0.7249663472175598,
+      "bias_degC": 0.14633657038211823
+    },
+    {
+      "depth_m": 100.0,
+      "rmse_degC": 0.45187970995903015,
+      "r2": 0.7846574783325195,
+      "bias_degC": 0.09868345409631729
+    },
+    {
+      "depth_m": 500.0,
+      "rmse_degC": 0.1684708595275879,
+      "r2": 0.3242102861404419,
+      "bias_degC": 0.030382515862584114
+    },
+    {
+      "depth_m": 1000.0,
+      "rmse_degC": 0.0626460388302803,
+      "r2": 0.06293773651123047,
+      "bias_degC": 0.004428992513567209
+    }
+  ],
+  "sample_points": [
+    {
+      "label": "P1",
+      "day_index": 24,
+      "day": "2020-01-25",
+      "lat": 15.5,
+      "lon": 85.5
+    },
+    {
+      "label": "P2",
+      "day_index": 27,
+      "day": "2020-01-28",
+      "lat": 17.5,
+      "lon": 87.5
+    },
+    {
+      "label": "P3",
+      "day_index": 30,
+      "day": "2020-01-31",
+      "lat": 19.5,
+      "lon": 89.5
+    }
+  ],
+  "generated_utc": "2026-09-06T15:41:08.348167+00:00"
+}

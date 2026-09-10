@@ -1,0 +1,37 @@
+OceanEmbed baseline model - results
+=====================================================
+generated UTC        : 2026-09-06T15:39:38.503223+00:00
+model                : RandomForestRegressor (scikit-learn 1.9.0)
+predicting           : subsurface temperature, deg C (primary target: 100 m)
+features             : 7 surface vars (sst ssh sss u_current v_current u_wind v_wind)
+input data           : ocean_data_preprocessed.npz (standardized)
+total samples        : 13,671 (31 days x 441 grid points)
+training samples     : 10,584  (80%)
+hold-out (chronological) : 3,087  (20%, last 7 days)
+
+Primary baseline target (100 m) held-out metrics:
+-----------------------------------------------------
+  RMSE  = 0.2510 deg C
+  R2    = 0.9336
+  BIAS  = -0.0102 deg C
+-----------------------------------------------------
+Reference (in-sample train) RMSE @ 100 m = 0.0809 deg C
+
+Per-depth held-out (chronological last-20% days) metrics
+depth_m,rmse_degC,r2,bias_degC,train_rmse_degC
+0,0.0008,1.0000,+0.0000,0.0043
+50,0.2042,0.9492,+0.0173,0.0764
+100,0.2510,0.9336,-0.0102,0.0809
+500,0.1439,0.5071,+0.0108,0.0428
+1000,0.0531,0.3269,+0.0029,0.0160
+
+Sample validation points (visualize.py convention)
+point,day_index,lat,lon
+P1,24,15.50,85.50
+P2,27,17.50,87.50
+P3,30,19.50,89.50
+
+Feature importances (primary 100 m model): sst=0.687, ssh=0.283, sss=0.007, u_wind=0.006, v_current=0.006, v_wind=0.006, u_current=0.005
+
+NOTE: Data are SYNTHETIC. Metrics gauge internal consistency,
+not real-world skill.

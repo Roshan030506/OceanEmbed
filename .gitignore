@@ -1,0 +1,106 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Python build files
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Test / Coverage
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# =========================
+# OceanEmbed generated data
+# =========================
+data/raw/
+data/processed/
+data/interim/
+
+# Large scientific datasets
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.zarr
+*.grib
+*.grb
+*.zip
+
+# NumPy generated datasets
+*.npz
+
+# =========================
+# Model checkpoints
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# =========================
+# Generated outputs
+# =========================
+outputs/
+runs/
+checkpoints/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.bak
